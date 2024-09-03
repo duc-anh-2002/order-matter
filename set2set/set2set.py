@@ -45,7 +45,7 @@ class Set2Set(nn.Module):
         self.in_channels = in_channels
         self.out_channels = 2 * in_channels
         self.processing_steps = processing_steps
-        self.num_layers = num_layers
+        self.num_layers = num_layers # no. layers of LSTM
         self.lstm = nn.LSTM(input_size=self.out_channels,
                             hidden_size=self.in_channels,
                             num_layers=self.num_layers)
